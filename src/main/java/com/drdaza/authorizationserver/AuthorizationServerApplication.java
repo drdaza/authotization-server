@@ -1,13 +1,7 @@
 package com.drdaza.authorizationserver;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import com.drdaza.authorizationserver.enums.RoleName;
-import com.drdaza.authorizationserver.models.Role;
-import com.drdaza.authorizationserver.repositories.RoleRepository;
 
 @SpringBootApplication
 public class AuthorizationServerApplication {

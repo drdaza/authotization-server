@@ -15,11 +15,9 @@ import com.drdaza.authorizationserver.repositories.AppUserRepository;
 import com.drdaza.authorizationserver.repositories.RoleRepository;
 
 import lombok.AllArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 
 @Service
 @AllArgsConstructor
-@Slf4j
 public class AppUserService {
     private final AppUserRepository appUserRepository;
 
