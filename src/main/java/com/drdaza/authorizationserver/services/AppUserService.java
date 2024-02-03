@@ -35,8 +35,6 @@ public class AppUserService {
 
         payload.roles().forEach(roleItem -> {
             Role role = roleRepository.findByRole(RoleName.valueOf(roleItem)).orElseThrow(() -> new RuntimeException("role not found"));
-            System.out.println("---------------------------------------------");
-            System.out.println(role);
             roles.add(role);
         });
 
