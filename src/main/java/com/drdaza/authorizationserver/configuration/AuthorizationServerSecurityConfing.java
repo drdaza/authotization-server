@@ -43,6 +43,7 @@ import org.springframework.security.web.session.HttpSessionEventPublisher;
 
 import com.drdaza.authorizationserver.federated.FederatedIdentityConfigurer;
 import com.drdaza.authorizationserver.federated.UserRepositoryOAuth2UserHandler;
+import com.drdaza.authorizationserver.repositories.GoogleUserRepository;
 import com.drdaza.authorizationserver.services.ClientService;
 import com.nimbusds.jose.jwk.JWKSet;
 import com.nimbusds.jose.jwk.RSAKey;
@@ -57,6 +58,7 @@ public class AuthorizationServerSecurityConfing {
 
    private final PasswordEncoder passwordEncoder;
    private final ClientService clientService;
+   private final GoogleUserRepository googleUserRepository;
 
     @Bean
     @Order(1)
@@ -73,7 +75,7 @@ public class AuthorizationServerSecurityConfing {
     @Order(2)
     SecurityFilterChain webSecurityFilterChain(HttpSecurity http) throws Exception {
         FederatedIdentityConfigurer federatedIdentityConfigurer = new FederatedIdentityConfigurer()
-                .oauth2UserHandler(new UserRepositoryOAuth2UserHandler());
+                .oauth2UserHandler(new UserRepositoryOAuth2UserHandler(googleUserRepository));
         http
                 .authorizeHttpRequests(authorize ->
                         authorize
