@@ -8,7 +8,6 @@ import com.drdaza.authorizationserver.payloads.MessageUserPayload;
 import com.drdaza.authorizationserver.services.ClientService;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 @RestController
 @RequestMapping("/client")
 @RequiredArgsConstructor
-@Slf4j
 public class ClientController {
 
 

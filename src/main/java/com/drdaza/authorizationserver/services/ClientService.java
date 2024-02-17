@@ -11,11 +11,9 @@ import com.drdaza.authorizationserver.payloads.MessageUserPayload;
 import com.drdaza.authorizationserver.repositories.ClientRepository;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 
 @Service
 @RequiredArgsConstructor
-@Slf4j
 public class ClientService implements RegisteredClientRepository{
 
     private final ClientRepository clientRepository;
